@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Square game</title>
+		<script type="text/javascript" src="game.js"></script>
+		<link rel="stylesheet" type="text/css" href="game.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- these codes were adapted from https://courses.cs.washington.edu/courses/cse154/17sp/lecture/more-dom/code/squares.html  -->
+
+		<fieldset>
+			<legend>Control</legend>
+			Number of box: 
+			<input type="text" name="numbox" id="numbox">
+			<select name="color" id = "color">
+				<option value="maroon">Maroon</option>
+				<option value="lightgreen">Lightgreen</option>
+				<option value="magenta">Magenta</option>
+			</select>
+			<button id="start">Start</button>
+			<div id="timerClock"> Timer:
+				<div id="clock"></div>
+			</div>
+		</fieldset>
+
+		
+		
+
+		<div id="container">
+			<div id="layer"></div>
+		</div>
+	
+	</body>
+</html>

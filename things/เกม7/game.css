@@ -1,0 +1,248 @@
+#container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    /* พื้นหลังสีชมพูนุ่มนวล */
+    padding: 20px;
+    border-radius: 15px;
+    /* ทำขอบมน */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงา */
+}
+
+#layer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 5px solid #820000;
+    /* เปลี่ยนสีเส้นขอบให้หวานขึ้น */
+    border-radius: 15px;
+    /* ขอบมน */
+    background-color: #f0d3d3;
+    /* สีพื้นหลังขาวอมชมพู */
+
+}
+
+.square {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgb(251, 237, 237);
+}
+
+.maroon {
+    background-color: rgb(202, 122, 122);
+}
+
+.lightgreen {
+    background-color: rgb(134, 167, 150);
+}
+
+.magenta {
+    background-color: rgb(91, 35, 91);
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #820000;
+    /* สีชมพูสด */
+    background-color: #f0d3d3;
+    /* พื้นหลังสีชมพูอ่อน */
+    padding: 5px 10px;
+    border-radius: 10px;
+    /* มุมมน */
+    border: 2px solid #820000;
+    /* ขอบสีชมพูอ่อน */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* เงาเบา ๆ */
+    display: inline-block;
+    /* เพื่อให้ legend มีขอบตามเนื้อหา */
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 2px solid #820000;
+    border-radius: 15px;
+    background-color: #f0d3d3;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #820000;
+}
+
+button {
+    background-color: #f0d3d3;
+    color: rgb(73, 0, 0);
+    border: none;
+    padding: 12px 20px;
+    /* ขนาดปุ่มใหญ่ขึ้น */
+    border-radius: 30px;
+    /* ขอบมนขึ้นเพื่อความน่ารัก */
+    font-size: 18px;
+    /* ขนาดตัวอักษรใหญ่ขึ้น */
+    font-weight: bold;
+    /* เพิ่มความโดดเด่นของตัวอักษร */
+    cursor: pointer;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(61, 4, 4, 0.4);
+    /* เพิ่มเงาให้นุ่มนวล */
+}
+
+button:hover {
+    background-color: #820000;
+    /* เปลี่ยนสีปุ่มเมื่อ hover */
+    transform: scale(0.9);
+    /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    box-shadow: 0 8px 20px rgba(255, 102, 178, 0.6);
+    /* เพิ่มเงาเมื่อ hover */
+}
+
+button:active {
+    transform: scale(0.85);
+    /* ขนาดเล็กลงเมื่อกดปุ่ม */
+    box-shadow: 0 3px 10px rgba(255, 102, 178, 0.6);
+    /* เงาน้อยลงเมื่อกด */
+}
+
+#timerClock {
+
+    color: #820000;
+    border: none;
+    padding: 12px 20px;
+    /* ขนาดปุ่มใหญ่ขึ้น */
+    border-radius: 30px;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+    color: #820000;
+    /* สีชมพู */
+
+}
+
+/* ซ่อนข้อความเริ่มต้น */
+#message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20;
+    padding: 20px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: popUp 0.5s ease;
+}
+
+
+.win {
+    background-color: #820000;
+    color: #f0d3d3;
+}
+
+.lose {
+    background-color: #820000;
+    color: #f0d3d3;
+}
+
+.ready {
+    background-color: #820000;
+    color: #f0d3d3;
+
+}
+
+/* แอนิเมชันสำหรับการแสดงข้อความ */
+@keyframes popUp {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+#color {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 20px;
+}
+
+#color:hover {
+    background-color: #820000;
+    /* เปลี่ยนสีปุ่มเมื่อ hover */
+    color: #f0d3d3;
+    transform: scale(0.9);
+    /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    box-shadow: 0 8px 20px rgba(255, 102, 178, 0.6);
+    /* เพิ่มเงาเมื่อ hover */
+}
+
+#color:active {
+    transform: scale(0.85);
+    /* ขนาดเล็กลงเมื่อกดปุ่ม */
+    box-shadow: 0 3px 10px rgba(255, 102, 178, 0.6);
+    /* เงาน้อยลงเมื่อกด */
+    color: #f0d3d3;
+}
+
+#numbox {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #020000
+}
+
+/* สไตล์สำหรับ input ที่มี id="numbox" */
+input#numbox {
+    border-radius: 10px;
+    /* ทำให้ขอบมน */
+    border: 2px solid #bb8e8e;
+    /* เพิ่มขอบสีชมพู */
+    padding: 5px 10px;
+    /* เพิ่มระยะห่างภายใน */
+    font-size: 16px;
+    /* ปรับขนาดตัวอักษรภายใน */
+    outline: none;
+    /* เอาเส้นขอบเมื่อคลิกออก */
+    box-shadow: 0 3px 6px rgb(192, 147, 147);
+    /* เพิ่มเงาเบา ๆ */
+    transition: box-shadow 0.3s ease;
+    /* เพิ่มเอฟเฟกต์เวลาโฮเวอร์ */
+}
+
+/* เพิ่มเอฟเฟกต์เมื่อ hover */
+input#numbox:hover {
+    box-shadow: 0 6px 12px rgb(150, 8, 8);
+    /* เพิ่มเงาเมื่อโฮเวอร์ */
+}
+
+/* เพิ่มเอฟเฟกต์เมื่อโฟกัส */
+input#numbox:focus {
+    box-shadow: 0 6px 12px rgba(255, 153, 204, 0.5);
+    /* เพิ่มเงาสีชมพูเมื่อโฟกัส */
+    border-color: #820000;
+    /* เปลี่ยนสีขอบเมื่อโฟกัส */
+}
